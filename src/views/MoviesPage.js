@@ -10,10 +10,9 @@ class MoviesPage extends Component {
   };
   async componentDidMount() {
     const parsed = queryString.parse(this.props.location.search);
-    // console.log(parsed);
+    
     const stringified = queryString.stringify(parsed);
-    // console.log(stringified);
-    // console.log(this.props.location.search);
+   
 
     if (stringified) {
       const results = await api.fetchMoviesSearchparsed(stringified);

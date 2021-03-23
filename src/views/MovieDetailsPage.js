@@ -30,7 +30,7 @@ class MoviesDetailsView extends Component {
       return;
     }
     history.push(routes.home);
-    // альтернатива:
+    // альт:
     // history.push(location?.state?.from || routes.home);
   };
   render() {
@@ -47,7 +47,7 @@ class MoviesDetailsView extends Component {
     return (
       <div>
         <button
-          className="btn btn-dark mt-4"
+          className="btn btn-dark mt-1"
           type="button"
           onClick={this.handleGoBack}
         >
@@ -55,7 +55,7 @@ class MoviesDetailsView extends Component {
           Go back
         </button>
 
-        <div className="card mb-3">
+        <div className="card mb-4">
           <div className="row no-gutters">
             {poster_path && (
               <img
@@ -65,7 +65,7 @@ class MoviesDetailsView extends Component {
               ></img>
             )}
 
-            <div className="col-lg-7 col-md-5 pr-2">
+            <div className="col-lg-8 col-md-6 pr-3">
               <h2>
                 {title} ({release_date.slice(0, 4)})
               </h2>
